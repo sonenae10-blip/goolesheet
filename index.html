@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TODO with Google Sheets</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Google 시트를 백엔드로 사용하는 TODO 웹앱" />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="data:," />
+  <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin" />
+  <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp" />
+  <meta http-equiv="Cross-Origin-Resource-Policy" content="cross-origin" />
+  <style>/* 안전한 폰트 fallback */ @font-face{font-family:system-ui;src:local("Segoe UI"),local("Roboto");}</style>
+  <noscript>이 앱을 사용하려면 JavaScript가 필요합니다.</noscript>
+</head>
+<body>
+  <main class="container">
+    <h1>나의 할 일</h1>
+
+    <form id="new-form" autocomplete="off">
+      <input id="new-input" type="text" placeholder="할 일을 입력하세요..." />
+      <button type="submit">추가</button>
+    </form>
+
+    <section id="list" class="list"></section>
+
+    <footer class="footer">
+      <button id="reload-btn" class="secondary">새로고침</button>
+      <span id="status" class="status">로딩 대기 중</span>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+  <!-- GitHub Pages에서 SPA 라우팅이 필요없으므로 단순 정적 파일로 동작합니다. -->
+</body>
+</html>
+
